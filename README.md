@@ -1,13 +1,17 @@
 # 🎮 2D Game Project with CursorAI
 
-This 2D game is being developed as part of a personal practice project using **CursorAI**.
+Этот 2D-проект разрабатывается в качестве личной практики с использованием **CursorAI**.
 
-## Project Purpose
+## Цели проекта
 
-The main goal of this project is to:
-- Gain hands-on experience in 2D game development.
-- Explore the capabilities of **CursorAI** for building interactive games.
-- Improve programming and game logic skills in a practical way.
+Основные задачи разработки:
+- Получить практический опыт в 2D-геймдеве.
+- Изучить возможности **CursorAI** для создания интерактивных игр.
+- Прокачать навыки программирования и построения игровой логики.
 
-## Live Demo (Beta Version)
-👉 [Play the game here](https://zebro-pentest.github.io/Game_html_AI/Game_html/)
+## Live Demo (Бета-версия)
+👉 [Играть здесь](https://zebro-pentest.github.io/Game_html_AI/Game_html/)
+
+## Последние обновления
+- Создал 2 новых уровня, и еще требует доработок
+- сделал структуру более понятней
