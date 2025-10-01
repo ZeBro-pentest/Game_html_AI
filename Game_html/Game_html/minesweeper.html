@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сапер - Cyber Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Игры</h2>
+            <button class="close-sidebar">×</button>
+        </div>
+        <ul class="games-list">
+            <li><button type="button">Главное меню</button></li>
+            <li class="active"><button type="button">1. Сапер</button></li>
+            <li><button type="button">2. Змейка</button></li>
+            <li><button type="button">3. Тетрис</button></li>
+            <li><button type="button">4. Пинг-Понг</button></li>
+            <li><button type="button">5. Пятнашки</button></li>
+            <li class="coming-soon"><button type="button">6. Крестики-Нолики</button></li>
+            <li class="coming-soon"><button type="button">7. Арканоид</button></li>
+            <li class="coming-soon"><button type="button">8. Платформер</button></li>
+            <li class="coming-soon"><button type="button">9. Пазл</button></li>
+            <li class="coming-soon"><button type="button">10. Морской бой</button></li>
+        </ul>
+    </div>
+
+    <div class="burger-menu">
+        <div class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <h2 class="game-title">MINESWEEPER</h2>
+        <div class="game-header">
+            <div class="mines-count">💣 <span id="mines-count">0</span></div>
+            <button id="reset-button">😊</button>
+            <div class="timer">⏱️ <span id="timer">0</span></div>
+        </div>
+        <div id="game-board"></div>
+    </div>
+
+    <script src="js/minesweeper/minesweeper.js"></script>
+    <script src="js/common/app.js"></script>
+</body>
+</html> 
