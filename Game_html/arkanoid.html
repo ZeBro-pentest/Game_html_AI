@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арканоид - Cyber Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Игры</h2>
+            <button class="close-sidebar">×</button>
+        </div>
+        <ul class="games-list">
+            <li><button type="button">Главное меню</button></li>
+            <li><button type="button">1. Сапер</button></li>
+            <li><button type="button">2. Змейка</button></li>
+            <li><button type="button">3. Тетрис</button></li>
+            <li><button type="button">4. Пинг-Понг</button></li>
+            <li><button type="button">5. Пятнашки</button></li>
+            <li><button type="button">6. Крестики-Нолики</button></li>
+            <li class="active"><button type="button">7. Арканоид</button></li>
+            <li><button type="button">8. Платформер</button></li>
+            <li><button type="button">9. Пазл</button></li>
+            <li><button type="button">10. Морской бой</button></li>
+        </ul>
+    </div>
+
+    <div class="burger-menu">
+        <div class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <h2 class="game-title">ARKANOID</h2>
+        <div class="game-header" style="margin-bottom: 15px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <div style="color: #00ff88; font-family: 'Orbitron', sans-serif; font-size: 20px; font-weight: 600; text-shadow: 0 0 10px rgba(0, 255, 136, 0.6); width: 100%; padding-bottom: 20px; border-bottom: 2px solid rgba(0, 255, 136, 0.2);">
+                Счет: <span id="score">0</span> | Жизни: <span id="lives">3</span>
+            </div>
+            <div style="width: 100%; padding-bottom: 20px; border-bottom: 2px solid rgba(0, 255, 136, 0.2); display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                <div style="color: #00ff88; font-family: 'Orbitron', sans-serif; font-size: 18px; font-weight: 600; text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);">Выберите уровень:</div>
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <button id="level-easy" class="level-btn active" data-level="easy" style="padding: 12px 24px; background: linear-gradient(145deg, rgba(0,255,136,0.3), rgba(0,200,100,0.2)); color: #00ff88; border: 2px solid rgba(0,255,136,0.5); border-radius: 8px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 15px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(0,255,136,0.2);">Легкий</button>
+                    <button id="level-medium" class="level-btn" data-level="medium" style="padding: 12px 24px; background: linear-gradient(145deg, rgba(0,255,136,0.2), rgba(0,200,100,0.15)); color: #00ff88; border: 2px solid rgba(0,255,136,0.4); border-radius: 8px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 15px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0,255,136,0.15);">Средний</button>
+                    <button id="level-hard" class="level-btn" data-level="hard" style="padding: 12px 24px; background: linear-gradient(145deg, rgba(0,255,136,0.2), rgba(0,200,100,0.15)); color: #00ff88; border: 2px solid rgba(0,255,136,0.4); border-radius: 8px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 15px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0,255,136,0.15);">Сложный</button>
+                </div>
+            </div>
+            <div style="padding-top: 0;">
+                <button id="start-btn" style="padding: 12px 30px; background: linear-gradient(145deg, rgba(0,255,136,0.3), rgba(0,200,100,0.2)); color: #00ff88; border: 2px solid rgba(0,255,136,0.5); border-radius: 8px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 18px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(0,255,136,0.2);">Старт</button>
+            </div>
+            <style>
+                .level-btn:hover, #start-btn:hover {
+                    background: linear-gradient(145deg, rgba(0,255,136,0.4), rgba(0,200,100,0.3)) !important;
+                    border-color: rgba(0,255,136,0.7) !important;
+                    box-shadow: 0 0 20px rgba(0,255,136,0.4) !important;
+                    transform: translateY(-2px);
+                }
+            </style>
+        </div>
+        <canvas id="game-canvas" width="700" height="450" style="display: block; margin: 0 auto; border: 2px solid rgba(0,255,136,0.3); border-radius: 8px; background: rgba(0,0,0,0.6);"></canvas>
+    </div>
+
+    <script src="js/arkanoid/arkanoid.js"></script>
+    <script src="js/common/app.js"></script>
+</body>
+</html>
+

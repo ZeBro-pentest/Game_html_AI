@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Морской бой - Cyber Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Игры</h2>
+            <button class="close-sidebar">×</button>
+        </div>
+        <ul class="games-list">
+            <li><button type="button">Главное меню</button></li>
+            <li><button type="button">1. Сапер</button></li>
+            <li><button type="button">2. Змейка</button></li>
+            <li><button type="button">3. Тетрис</button></li>
+            <li><button type="button">4. Пинг-Понг</button></li>
+            <li><button type="button">5. Пятнашки</button></li>
+            <li><button type="button">6. Крестики-Нолики</button></li>
+            <li><button type="button">7. Арканоид</button></li>
+            <li><button type="button">8. Платформер</button></li>
+            <li><button type="button">9. Пазл</button></li>
+            <li class="active"><button type="button">10. Морской бой</button></li>
+        </ul>
+    </div>
+
+    <div class="burger-menu">
+        <div class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <h2 class="game-title">BATTLESHIP</h2>
+        <div class="game-header" style="margin-bottom: 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <div id="status" style="color: #00ff88; font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: 600; text-shadow: 0 0 10px rgba(0, 255, 136, 0.6); width: 100%; padding-bottom: 15px; border-bottom: 2px solid rgba(0, 255, 136, 0.2);">Расставьте корабли</div>
+            <div style="color: #00ff88; font-family: 'Orbitron', sans-serif; font-size: 18px; font-weight: 600; text-shadow: 0 0 8px rgba(0, 255, 136, 0.5); width: 100%; padding-bottom: 20px; border-bottom: 2px solid rgba(0, 255, 136, 0.2);">
+                Ваши корабли: <span id="your-ships">5</span> | Корабли врага: <span id="enemy-ships">5</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; padding-top: 0;">
+                <button id="random-btn" style="padding: 12px 28px; background: linear-gradient(145deg, rgba(0,255,136,0.3), rgba(0,200,100,0.2)); color: #00ff88; border: 2px solid rgba(0,255,136,0.5); border-radius: 8px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(0,255,136,0.2); width: 250px;">Случайная расстановка</button>
+                <button id="start-btn" style="padding: 12px 28px; background: linear-gradient(145deg, rgba(0,255,136,0.3), rgba(0,200,100,0.2)); color: #00ff88; border: 2px solid rgba(0,255,136,0.5); border-radius: 8px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(0,255,136,0.2); display: none; width: 250px;">Начать игру</button>
+            </div>
+            <style>
+                #random-btn:hover, #start-btn:hover {
+                    background: linear-gradient(145deg, rgba(0,255,136,0.4), rgba(0,200,100,0.3)) !important;
+                    border-color: rgba(0,255,136,0.7) !important;
+                    box-shadow: 0 0 20px rgba(0,255,136,0.4) !important;
+                    transform: translateY(-2px);
+                }
+            </style>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 20px;">
+            <div>
+                <h3 style="color: #00ff88; text-align: center; font-family: 'Orbitron', sans-serif; font-size: 20px; font-weight: 600; text-shadow: 0 0 8px rgba(0, 255, 136, 0.5); margin-bottom: 15px;">Ваше поле</h3>
+                <div id="player-board" style="display: grid; grid-template-columns: repeat(10, 40px); grid-template-rows: repeat(10, 40px); gap: 3px; margin: 0 auto;"></div>
+            </div>
+            <div>
+                <h3 style="color: #00ff88; text-align: center; font-family: 'Orbitron', sans-serif; font-size: 20px; font-weight: 600; text-shadow: 0 0 8px rgba(0, 255, 136, 0.5); margin-bottom: 15px;">Поле врага</h3>
+                <div id="enemy-board" style="display: grid; grid-template-columns: repeat(10, 40px); grid-template-rows: repeat(10, 40px); gap: 3px; margin: 0 auto;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/battleship/battleship.js"></script>
+    <script src="js/common/app.js"></script>
+</body>
+</html>
+

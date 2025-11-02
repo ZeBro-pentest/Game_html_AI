@@ -51,6 +51,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 case '5. Пятнашки':
                     window.location.href = 'fifteen.html';
                     break;
+                case '6. Крестики-Нолики':
+                    window.location.href = 'tic-tac-toe.html';
+                    break;
+                case '7. Арканоид':
+                    window.location.href = 'arkanoid.html';
+                    break;
+                case '8. Платформер':
+                    window.location.href = 'platformer.html';
+                    break;
+                case '9. Пазл':
+                    window.location.href = 'puzzle.html';
+                    break;
+                case '10. Морской бой':
+                    window.location.href = 'battleship.html';
+                    break;
             }
         });
     });
@@ -78,6 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
         new Pong();
     } else if (currentPage === 'fifteen.html') {
         new Fifteen();
+    } else if (currentPage === 'tic-tac-toe.html') {
+        // Игра инициализируется в своем JS файле
+    } else if (currentPage === 'arkanoid.html') {
+        // Игра инициализируется в своем JS файле
+    } else if (currentPage === 'platformer.html') {
+        // Игра инициализируется в своем JS файле
+    } else if (currentPage === 'puzzle.html') {
+        // Игра инициализируется в своем JS файле
+    } else if (currentPage === 'battleship.html') {
+        // Игра инициализируется в своем JS файле
     }
 });
 

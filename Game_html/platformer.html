@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пинг-Понг - Cyber Games</title>
+    <title>Платформер - Cyber Games</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,11 +20,11 @@
             <li><button type="button">1. Сапер</button></li>
             <li><button type="button">2. Змейка</button></li>
             <li><button type="button">3. Тетрис</button></li>
-            <li class="active"><button type="button">4. Пинг-Понг</button></li>
+            <li><button type="button">4. Пинг-Понг</button></li>
             <li><button type="button">5. Пятнашки</button></li>
             <li><button type="button">6. Крестики-Нолики</button></li>
             <li><button type="button">7. Арканоид</button></li>
-            <li><button type="button">8. Платформер</button></li>
+            <li class="active"><button type="button">8. Платформер</button></li>
             <li><button type="button">9. Пазл</button></li>
             <li><button type="button">10. Морской бой</button></li>
         </ul>
@@ -39,10 +39,19 @@
     </div>
 
     <div class="game-container">
-        <div id="game-board"></div>
+        <h2 class="game-title">PLATFORMER</h2>
+        <div class="game-header" style="margin-bottom: 15px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <div style="color: #00ff88; font-family: 'Orbitron', sans-serif; font-size: 20px; font-weight: 600; text-shadow: 0 0 10px rgba(0, 255, 136, 0.6); width: 100%; padding-bottom: 20px; border-bottom: 2px solid rgba(0, 255, 136, 0.2);">
+                Счет: <span id="score">0</span> | Жизни: <span id="lives">3</span>
+            </div>
+            <div style="color: #00ff88; font-family: 'Orbitron', sans-serif; font-size: 15px; text-shadow: 0 0 8px rgba(0, 255, 136, 0.4); padding-top: 0;">
+                Стрелки или WASD для движения, Пробел для прыжка
+            </div>
+        </div>
+        <canvas id="game-canvas" width="800" height="400" style="display: block; margin: 0 auto; border: 2px solid rgba(0,255,136,0.3); border-radius: 8px; background: rgba(0,0,0,0.6);"></canvas>
     </div>
 
-    <script src="js/pong/pong.js"></script>
+    <script src="js/platformer/platformer.js"></script>
     <script src="js/common/app.js"></script>
 </body>
 </html>
